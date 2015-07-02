@@ -1,0 +1,126 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+.banner{
+	width: 100%;
+	padding: 23px 0 19px 0;
+}
+.banner:after,.search:after,.search-tip:after{
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+	content: "";
+}
+.banner .logo{
+	float: left;
+	width: 134px;
+	height: 44px;
+	text-indent: -9999px;
+	background: url(image/qqlogo_1x.png) no-repeat center center;
+	margin-left: 160px;
+}
+.banner .search{
+	float: left;
+	width: 381px;
+	height: 37px;
+	padding: 5px 0 0 42px;
+	margin-top: -2px;
+	
+}
+.search .search-tip{
+	float: left;
+	width: 225px;
+	border: 1px solid rgb(169, 169, 169);
+	border-right: 0 none;
+
+}
+.search:hover .search-tip{
+	border: 1px solid blue;
+	border-right: 0 none;
+}
+.search select{
+	float: left;
+	height: 35px;
+	font:normal 15px/15px "宋体";
+	border: 0 none;
+	padding: 4px 0 4px 0;
+}
+.search select:focus{
+	outline: none;
+}
+.search input{
+	float: left;
+	width: 160px;
+	height: 35px;
+	border: 0 none;
+	font:normal 20px/20px "宋体";
+}
+.search input:focus{
+	outline: none;
+}
+.search button{
+	float: left;
+	width: 100px;
+	height: 37px;
+	font:normal 20px/20px "宋体";
+}
+.login{
+	width: 160px;
+	height: 42px;
+	float: right;
+}
+.login ul{
+	height: 100%;
+}
+.login li{
+	width: 24px;
+	height: 24px;
+	padding: 7px 8px 6px 8px;
+	float: left;
+}
+.login li a{
+	display: block;
+	width: 24px;
+	height: 24px;
+
+	background: url(image/dyIcon.png) no-repeat center 0;
+}
+.nav {
+	width: 1000px;
+	height: 65px;
+	margin: 0 auto;
+	background: url(image/chanelNavBeta2_141013.jpg) no-repeat 0 0;
+	padding: 8px  0 0 12px;
+}
+.nav .navinner{
+	width: 988px;
+	height: 57px;
+}
+.nav  .navinner div{
+	width: 126px;
+	height: 25px;
+	padding:0 10px ;
+	float: left;
+}
+.nav div a{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 3px;
+	margin: 0px 4px 0 3px;
+	font: bold 14px/22px "宋体";
+	float: left;
+}
+.nav div a:hover{
+	background: #fff;
+	color: #000;
+}

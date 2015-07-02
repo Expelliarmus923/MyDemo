@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SinaSwitchTab2</title>
+	<style type="text/css">
+	*{	
+		padding: 0;
+		margin: 0;  
+		font: 12px/24px "Microsoft Yahei","simsun";
+		list-style-type: none;
+		color: #333;
+	}
+	.travel{
+		width: 1000px;
+		height: 497px;
+		margin: 0 auto;
+	}
+	.travel .title{
+		width: 100%;
+		height: 44px;
+		margin-top: 15px;
+		border-bottom:2px solid #0078DB;
+
+		font-size: 18px;
+		line-height: 40px;
+	}
+	.travel_nav{
+		width: 100%;
+		height: 50px;
+		margin-bottom: 30px;
+	}
+	.travel_nav ul{
+		width: 100%;
+		height: 100%;
+		background: #F8F8F8;
+
+	}
+	.travel_nav li{
+		width: 83px;
+		height: 49px;
+		float: left;
+		cursor: pointer;
+		border: 1px solid #ececec;
+		text-align: center;
+		margin-right: -1px;
+	}
+	.travel_nav li a{
+		color: #333;
+		font-size: 16px;
+  		line-height: 49px; 
+  		text-decoration: none;
+	}
+	.travel_nav .active{
+		background: #fff;
+		border-bottom: 0 none;
+	}
+	.travel_nav .active a{
+		color:#0078DB;
+	}
+	.travel_data{
+		clear: both;
+	}
+	.list{
+		display: none;
+	}
+	.active{
+		display: block;
+	}
+	.list li{
+		width: 695px;
+		border-bottom: 1px solid #ebebeb;
+		height: 165px;
+		padding-top: 20px;
+
+	}
+	
+	.travel_data .new_img{
+		float: left;
+		width: 200px;
+		height: 145px;
+	}
+	.travel_data .new_img img {
+		width: 100%;
+	}
+	.travel_data .list_text{
+		float: left;
+		width: 475px;
+		height: auto;
+		margin-left: 20px;
+	}
+	.travel_data .list_title h3{
+		height: 43px;
+		float: left;
+		font-size: 18px;
+		font-weight: normal;
+	}
+	.travel_data .list_title span{
+		float: right;
+	}
+	.list_text .describe{
+		height: 52px;
+		margin-bottom: 30px;
+	}
+	.clear:after{
+		clear: both;
+		display: block;
+		visibility: hidden;
+		height: 0;
+		line-height: 0;
+		content: "";
+	}
+	</style>
+</head>
+<body>
+<div class="travel">
+	<h3 class="title">旅游</h3>
+	<div class="travel_nav">
+		<ul id="nav">
+			<li class="active"><a href="javascript:;">宁波</a></li>
+			<li><a href="javascript:;">舟山</a></li>
+<!-- 			<li><a href="javascript:;">江苏</a></li>
+<li><a href="javascript:;">杭州</a></li> -->
+		</ul>
+	</div>
+	<div class="travel_data" id="data">
+		<ul class="list  active">
+			<li>
+				<div class="new_img"><a href="#"><img src="12.jpg"></a></div>
+				<div class="list_text clear">
+					<div class="list_title clear">
+						<h3>沿美食寻美景宁波土特产寻踪</h3>
+						<span>作者：清河汉子</span>
+					</div>
+					<p class="describe">土特产，总带着强烈的地方色彩。宁波，十里不同音，百里不同俗，...<a href="#">[详细]</a></p>
+				</div>
+			</li>
+			<li>
+				<div class="new_img"><a href="#"><img src="12.jpg"></a></div>
+				<div class="list_text clear">
+					<div class="list_title clear">
+						<h3>沿美食寻美景宁波土特产寻踪</h3>
+						<span>作者：清河汉子</span>
+					</div>
+					<p class="describe">土特产，总带着强烈的地方色彩。宁波，十里不同音，百里不同俗，...<a href="#">[详细]</a></p>
+				</div>
+			</li>
+		</ul>
+
+
+		<ul class="list">
+			<li>
+				<div class="new_img"><a href="#"><img src="13.jpg"></a></div>
+				<div class="list_text clear">
+					<div class="list_title clear">
+						<h3>前童古镇 凝固时光的画廊</h3>
+						<span>作者：TIME-1975</span>
+					</div>
+					<p class="describe">前童古镇，是一座不凡的江南明清时期的民居原版，是一幅古韵浓重...<a href="#">[详细]</a></p>
+				</div>
+			</li>
+			<li>
+				<div class="new_img"><a href="#"><img src="13.jpg"></a></div>
+				<div class="list_text clear">
+					<div class="list_title clear">
+						<h3>沿美食寻美景宁波土特产寻踪</h3>
+						<span>作者：清河汉子</span>
+					</div>
+					<p class="describe">土特产，总带着强烈的地方色彩。宁波，十里不同音，百里不同俗，...<a href="#">[详细]</a></p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	var i,nav_li=document.getElementById("nav").getElementsByTagName("li")
+	,data_ul=document.getElementById("data").getElementsByTagName("ul");
+	for(i=0;i<nav_li.length;i++){
+		nav_li[i].index=i;
+		nav_li[i].onmouseover=function(){
+			for(i=0;i<data_ul.length;i++){
+				nav_li[i].className="";
+				data_ul[i].className="list";
+			}
+			this.className+=" active";
+			data_ul[this.index].className+=" active";
+		}
+	}
+</script>
+</body>
+</html>
